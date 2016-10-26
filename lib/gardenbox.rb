@@ -1,27 +1,4 @@
 class GardenBox
-  
-  def ErrorCheck int_input
-    case  int_input   
-    when (/\D/)
-      return false
-    end   
-  end
-   
-  def GetInfo 
-    puts "Please enter the length of your box"
-    length = gets.chomp.to_i
-    puts "Please enter the width of your box"
-    width = gets.chomp.to_i
-    puts "Which Veggie would you like to plant?"
-    puts "1) Carrots" 
-    puts "2) Corn" 
-    puts "3) Beets"    
-    veggie = gets.chomp.to_i
-   if ErrorCheck veggie == false #|| ErrorCheck width == false || ErrorCheck length == false 
-      return "Not A Valid Input" 
-    end 
-  end
-  
   def VeggieChoice length,width,veggie
     veggie_Arr=["You can plant: ","Carrots", "Corn", "Beets"]   
     area = width*length     
@@ -36,7 +13,6 @@ class GardenBox
       return "Not a Valid Option"
     end
   end
-
 
   def Plant  length,width,veggie
     VeggieChoice length, width, veggie

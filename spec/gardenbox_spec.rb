@@ -62,18 +62,17 @@ it "returns The Area of your box is 0" do
       expect(size.Plant(l,w,veggie)).to eq("Not a Valid Option") 
     end
   end
-
+  context "Given a char in replace of a int" do
+    it "returns Not a Valid Input"  do
+      size = GardenBox.new
+      l=5
+      w= "*"
+      veggie="*"
+      expect(size.Plant(l,w,veggie)).to eq("Not a Valid Option") 
+    end
+  end
 end
 end
 
-#describe GardenBox do
-#  describe "GetInfo Function" do
-   # context "given a char instead of an int " do
-    #  it "return 'Not a Valid Input'" do
-      #  size = GardenBox.new
-       
-      #  expect(size.GetInfo()).to eq("Not a Valid Input") 
-     # end
-   # end       
- # end
-  #end
+ 
+  
