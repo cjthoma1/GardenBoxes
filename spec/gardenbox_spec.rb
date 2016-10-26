@@ -35,7 +35,7 @@ it "returns The Area of your box is 0" do
   end
   end
 
-  context "Given a string in the int var 'veggie'" do
+  context "Given a string " do
     it "returns Not a valid input"  do
       size = GardenBox.new
       l=5
@@ -49,7 +49,7 @@ it "returns The Area of your box is 0" do
       size = GardenBox.new
       l=5
       w=5
-      veggie=5
+      veggie=99
       expect(size.Plant(l,w,veggie)).to eq("Not a Valid Option") 
     end
   end
@@ -57,18 +57,36 @@ it "returns The Area of your box is 0" do
     it "returns Not a Valid Input"  do
       size = GardenBox.new
       l=5
-      w= "*"
+      w= '+'
       veggie=5
-      expect(size.Plant(l,w,veggie)).to eq("Not a Valid Option") 
+      expect(size.Plant(l,w,veggie)).to be_nil
     end
   end
-  context "Given a char in replace of a int" do
+  context "Given a 2 strings in replace of a int" do
     it "returns Not a Valid Input"  do
       size = GardenBox.new
       l=5
       w= "*"
       veggie="*"
       expect(size.Plant(l,w,veggie)).to eq("Not a Valid Option") 
+    end
+  end
+  context "Given the last vegetable in the array" do
+    it "returns You can plant: 50.0 Turnips"  do
+      size = GardenBox.new
+      l=5
+      w= 5
+      veggie=9
+      expect(size.Plant(l,w,veggie)).to eq("You can plant: 50.0 Turnips") 
+    end
+  end
+  context "Given veggie = 5" do
+    it "returns You can plant: 11.25 Tomatoes"  do
+      size = GardenBox.new
+      l=5
+      w= 5
+      veggie=5
+      expect(size.Plant(l,w,veggie)).to eq("You can plant: 11.25 Tomatoes") 
     end
   end
 end
