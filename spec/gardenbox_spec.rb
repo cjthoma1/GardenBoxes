@@ -10,7 +10,7 @@ describe GardenBox do
         expect(size.Plant(l,w,veggie)).to eq("You can plant: 25.0 Carrots")        
   end
   end
-context "given var=5 and var =5" do
+context "given var= 5 and var= 5" do
   it "returns The Area of your box is 25" do
     size = GardenBox.new
     l=5

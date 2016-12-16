@@ -1,6 +1,11 @@
-Create an application that asks the user for the size
-of their raised beds. Then, using a database, allow the
-user to selet which crop they wish to plant. Using the
-info here (http://www.mysquarefootgarden.net/plant-spacing/)
-show the user how many plants of that crop they can fit into
-their space.
+# README
+
+Garden Boxes
+
+* Written in Ruby
+* Using Rspec for testing 
+* Given a length, width and a Vegetable from veggie array we can determine how many of selected vegetables we can plant;
+* Ex: length of 5, width of 5 and and Turnip (position 8 in our array) allows the user to plant 50 turnips 
+(area = l * w )
+(Turnip_Sqft = 2)
+(area * Turnip_Sqft = 50)
